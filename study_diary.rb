@@ -20,11 +20,17 @@ def welcome
 end
 
 def menu
-  puts "[1] Cadastrar um item para estudar"
-  puts "[2] Ver todos os itens cadastrados"
-  puts "[3] Buscar um item de estudo"
-  puts "[4] Sair"
-  print 'Escolha uma opção: '
+  menu = ["[1] Cadastrar um item para estudar",
+          "[2] Ver todos os itens cadastrados",
+          "[3] Buscar um item de estudo",
+          "[4] Sair"]
+end
+
+def show_choose_an_potion
+  "Escolha uma opção: "
+end
+
+def get_input
   gets.to_i
 end
 
