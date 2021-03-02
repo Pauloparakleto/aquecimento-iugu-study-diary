@@ -30,17 +30,21 @@ def show_choose_an_potion
   "Escolha uma opção: "
 end
 
-def get_input
+def get_input_integer
   gets.to_i
 end
 
 def register_study_item
-  print 'Digite o título do seu item de estudo: '
+  print ask_for_title
   title = gets.chomp.downcase
   print 'Digite a categoria do seu item de estudo: '
   category = gets.chomp.downcase
   puts "Item '#{title}' da categoria '#{category}' cadastrado com sucesso!"
   StudyItem.new(title, category)
+end
+
+def ask_for_title
+  'Digite o título do seu item de estudo: '
 end
 
 def print_items(collection)

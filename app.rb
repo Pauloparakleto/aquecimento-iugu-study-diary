@@ -5,7 +5,7 @@ puts welcome
 study_items = []
 puts menu
 print show_choose_an_potion
-option = get_input
+option = get_input_integer
 
 loop do
   clear
@@ -24,5 +24,7 @@ loop do
     puts 'Opção inválida'
   end
   clear_and_wait_keypress
-  option = menu
+  puts menu
+  print show_choose_an_potion
+  option = get_input_integer
 end
