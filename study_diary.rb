@@ -30,9 +30,9 @@ end
 
 def register_study_item
   print 'Digite o título do seu item de estudo: '
-  title = gets.chomp
+  title = gets.chomp.downcase
   print 'Digite a categoria do seu item de estudo: '
-  category = gets.chomp
+  category = gets.chomp.downcase
   puts "Item '#{title}' da categoria '#{category}' cadastrado com sucesso!"
   StudyItem.new(title, category)
 end
@@ -54,6 +54,7 @@ def search_items(collection)
   puts 'Nenhum item encontrado' if collection.empty?
 end
 
+=begin
 clear
 puts welcome
 study_items = []
@@ -78,3 +79,5 @@ loop do
   clear_and_wait_keypress
   option = menu
 end
+
+=end
