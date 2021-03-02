@@ -1,5 +1,26 @@
 require_relative 'study_item'
 
+class StudyDiary
+  def welcome
+    'Bem-vindo ao Diário de Estudos, seu companheiro para estudar!'
+  end
+
+  def menu
+    menu = ["[1] Cadastrar um item para estudar",
+            "[2] Ver todos os itens cadastrados",
+            "[3] Buscar um item de estudo",
+            "[4] Sair"]
+  end
+
+  def show_choose_an_potion
+    "Escolha uma opção: "
+  end
+
+  def get_input_integer
+    gets.to_i
+  end
+end
+
 def clear
   system('clear')
 end
@@ -13,25 +34,6 @@ end
 def clear_and_wait_keypress
   wait_keypress
   clear
-end
-
-def welcome
-  'Bem-vindo ao Diário de Estudos, seu companheiro para estudar!'
-end
-
-def menu
-  menu = ["[1] Cadastrar um item para estudar",
-          "[2] Ver todos os itens cadastrados",
-          "[3] Buscar um item de estudo",
-          "[4] Sair"]
-end
-
-def show_choose_an_potion
-  "Escolha uma opção: "
-end
-
-def get_input_integer
-  gets.to_i
 end
 
 def register_study_item
