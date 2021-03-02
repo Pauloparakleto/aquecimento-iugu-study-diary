@@ -12,6 +12,7 @@ loop do
   case option
   when 1
     study_items << register_study_item
+    puts item_registered_successfully
   when 2
     print_items(study_items)
   when 3
