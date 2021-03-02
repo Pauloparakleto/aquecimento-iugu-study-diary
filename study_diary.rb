@@ -19,6 +19,19 @@ class StudyDiary
   def get_input_integer
     gets.to_i
   end
+
+  def register_study_item
+    print ask_for_title
+    title = gets.chomp.downcase
+    print ask_for_category
+    category = gets.chomp.downcase
+    study_item = StudyItem.new(title, category)
+    study_item
+  end
+  
+  def item_registered_successfully
+    puts "Item cadastrado com sucesso!"
+  end
 end
 
 def clear
@@ -34,19 +47,6 @@ end
 def clear_and_wait_keypress
   wait_keypress
   clear
-end
-
-def register_study_item
-  print ask_for_title
-  title = gets.chomp.downcase
-  print ask_for_category
-  category = gets.chomp.downcase
-  study_item = StudyItem.new(title, category)
-  study_item
-end
-
-def item_registered_successfully
-  puts "Item cadastrado com sucesso!"
 end
 
 def ask_for_title

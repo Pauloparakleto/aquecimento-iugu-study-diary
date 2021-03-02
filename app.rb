@@ -13,8 +13,8 @@ loop do
   clear
   case option
   when 1
-    study_items << register_study_item
-    puts item_registered_successfully
+    study_items << study_diary.register_study_item
+    puts study_diary.item_registered_successfully
   when 2
     print_items(study_items)
   when 3
