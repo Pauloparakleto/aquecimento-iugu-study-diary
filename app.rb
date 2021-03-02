@@ -6,7 +6,7 @@ clear
 puts study_diary.welcome
 study_items = []
 puts study_diary.menu
-print study_diary.show_choose_an_potion
+print show_choose_an_potion
 option = study_diary.get_input_integer
 
 loop do
@@ -28,6 +28,6 @@ loop do
   end
   clear_and_wait_keypress
   puts study_diary.menu
-  print study_diary.show_choose_an_potion
+  print show_choose_an_potion
   option = study_diary.get_input_integer
 end
