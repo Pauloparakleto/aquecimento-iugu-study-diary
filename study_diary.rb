@@ -37,7 +37,7 @@ end
 def register_study_item
   print ask_for_title
   title = gets.chomp.downcase
-  print 'Digite a categoria do seu item de estudo: '
+  print ask_for_category
   category = gets.chomp.downcase
   puts "Item '#{title}' da categoria '#{category}' cadastrado com sucesso!"
   StudyItem.new(title, category)
@@ -45,6 +45,10 @@ end
 
 def ask_for_title
   'Digite o título do seu item de estudo: '
+end
+
+def ask_for_category
+  'Digite a categoria do seu item de estudo: '
 end
 
 def print_items(collection)
