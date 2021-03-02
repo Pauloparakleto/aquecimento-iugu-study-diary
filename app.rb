@@ -16,12 +16,12 @@ loop do
     study_items << study_diary.register_study_item
     puts study_diary.item_registered_successfully
   when 2
-    print_items(study_items)
+    study_diary.print_items(study_items)
   when 3
-    search_items(study_items)
+    study_diary.search_items(study_items)
   when 4
     clear
-    puts 'Obrigado por usar o Diário de Estudos'
+    puts thanks_for_use_it
     break
   else
     puts 'Opção inválida'

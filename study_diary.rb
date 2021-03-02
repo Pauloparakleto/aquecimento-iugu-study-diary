@@ -32,6 +32,28 @@ class StudyDiary
   def item_registered_successfully
     puts "Item cadastrado com sucesso!"
   end
+
+  def print_items(collection)
+    collection.each_with_index do |item, index|
+      puts "##{index + 1} - #{item.title} - #{item.category}"
+    end
+    puts 'Nenhum item cadastrado' if collection.empty?
+  end
+
+  def search_items(collection)
+    print 'Digite uma palavra para procurar: '
+    term = gets.chomp.downcase
+    found_items = collection.filter do |item|
+      item.title.include?(term)
+    end
+    print_items(found_items)
+    puts 'Nenhum item encontrado' if collection.empty?
+  end
+  
+  def thanks_for_use_it
+    'Obrigado por usar o Diário de Estudos'
+  end
+
 end
 
 def clear
@@ -57,22 +79,6 @@ def ask_for_category
   'Digite a categoria do seu item de estudo: '
 end
 
-def print_items(collection)
-  collection.each_with_index do |item, index|
-    puts "##{index + 1} - #{item.title} - #{item.category}"
-  end
-  puts 'Nenhum item cadastrado' if collection.empty?
-end
-
-def search_items(collection)
-  print 'Digite uma palavra para procurar: '
-  term = gets.chomp
-  found_items = collection.filter do |item|
-    item.title.include?(term)
-  end
-  print_items(found_items)
-  puts 'Nenhum item encontrado' if collection.empty?
-end
 
 =begin
 clear
