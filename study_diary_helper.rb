@@ -29,3 +29,7 @@ end
 def ask_for_category
   'Digite a categoria do seu item de estudo: '
 end
+
+def item_registered_successfully
+    puts "Item cadastrado com sucesso!"
+end

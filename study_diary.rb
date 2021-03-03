@@ -27,10 +27,6 @@ class StudyDiary
     study_item
   end
   
-  def item_registered_successfully
-    puts "Item cadastrado com sucesso!"
-  end
-
   def print_items(collection)
     collection.each_with_index do |item, index|
       puts "##{index + 1} - #{item.title} - #{item.category}"

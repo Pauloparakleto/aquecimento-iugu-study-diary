@@ -14,7 +14,7 @@ loop do
   case option
   when 1
     study_items << study_diary.register_study_item
-    puts study_diary.item_registered_successfully
+    puts item_registered_successfully
   when 2
     study_diary.print_items(study_items)
   when 3
