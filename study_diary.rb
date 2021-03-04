@@ -1,27 +1,31 @@
 require_relative 'study_item'
 require_relative 'system_helper'
 
-REGISTER = 1
-VIEW     = 2
-SEARCH   = 3
-EXIT     = 4
-
-#clear
-puts welcome
+clear
 
 loop do
-  #clear
+  puts head
   puts menu
   option = choose_an_option
   case option
   when REGISTER
+    clear
     StudyItem.register
+    clear_and_wait_keypress
   when VIEW
+    clear
     puts StudyItem.all
+    clear_and_wait_keypress
   when SEARCH
+    clear
     puts StudyItem.search
+    clear_and_wait_keypress
+  when DELETE
+    clear
+    puts StudyItem.delete
+    clear_and_wait_keypress
   when EXIT
-    #clear
+    clear
     puts thanks_for_use_it
     break
   else

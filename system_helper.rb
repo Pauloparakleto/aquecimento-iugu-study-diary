@@ -1,5 +1,17 @@
+REGISTER = 1
+VIEW     = 2
+SEARCH   = 3
+DELETE   = 4
+EXIT     = 5
+
 def welcome
     'Bem-vindo ao Diário de Estudos, seu companheiro para estudar!'
+end
+
+def separate
+    mesage = ["="]
+    welcome.length.times { mesage << "=" }
+    mesage.join
 end
 
 def choose_an_option
@@ -7,10 +19,15 @@ def choose_an_option
     gets.to_i
 end
 
+def head
+   [separate, welcome, separate]  
+end
+
 def menu
     menu = ["[#{REGISTER}] Cadastrar um item para estudar",
             "[#{VIEW}] Ver todos os itens cadastrados",
             "[#{SEARCH}] Buscar um item de estudo",
+            "[#{DELETE}] Apagar um item de estudo",
             "[#{EXIT}] Sair",
             ] 
 end
