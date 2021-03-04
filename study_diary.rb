@@ -43,22 +43,24 @@ def search_items
   print_items(found_items)
 end
 
-clear
+#clear
 puts welcome
-option = menu
 
 loop do
-  clear
+  #clear
+  puts welcome
+  option = menu
   case option
   when REGISTER
     StudyItem.register
+    option = menu
   when VIEW
     puts StudyItem.all
     puts 'Nenhum item encontrado' if StudyItem.all.empty?
   when SEARCH
     search_items
   when EXIT
-    clear
+    #clear
     puts 'Obrigado por usar o Diário de Estudos'
     break
   else
