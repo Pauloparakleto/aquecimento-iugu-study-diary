@@ -26,10 +26,14 @@ def welcome
 end
 
 def menu
-  puts "[#{REGISTER}] Cadastrar um item para estudar"
-  puts "[#{VIEW}] Ver todos os itens cadastrados"
-  puts "[#{SEARCH}] Buscar um item de estudo"
-  puts "[#{EXIT}] Sair"
+  menu = ["[#{REGISTER}] Cadastrar um item para estudar",
+          "[#{VIEW}] Ver todos os itens cadastrados",
+          "[#{SEARCH}] Buscar um item de estudo",
+          "[#{EXIT}] Sair",
+          ] 
+end
+
+def choose_an_option
   print 'Escolha uma opção: '
   gets.to_i
 end
@@ -48,7 +52,8 @@ puts welcome
 
 loop do
   #clear
-  option = menu
+  puts menu
+  option = choose_an_option
   case option
   when REGISTER
     StudyItem.register
