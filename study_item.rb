@@ -40,6 +40,8 @@ class StudyItem
     found_items = StudyItem.all.filter do |item|
       item.include?(term)
     end
+    return "Item não encontrado." if found_items.empty?
+    found_items
   end
 
   #def self.print
