@@ -40,7 +40,7 @@ def search_items
   found_items = StudyItem.all.filter do |item|
     item.include?(term)
   end
-  print_items(found_items)
+  print found_items
 end
 
 #clear
@@ -48,17 +48,15 @@ puts welcome
 
 loop do
   #clear
-  puts welcome
   option = menu
   case option
   when REGISTER
     StudyItem.register
-    option = menu
   when VIEW
     puts StudyItem.all
     puts 'Nenhum item encontrado' if StudyItem.all.empty?
   when SEARCH
-    search_items
+    puts StudyItem.search
   when EXIT
     #clear
     puts 'Obrigado por usar o Diário de Estudos'

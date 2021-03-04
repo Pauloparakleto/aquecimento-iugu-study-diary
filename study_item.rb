@@ -34,7 +34,12 @@ class StudyItem
     @@study_items
   end
 
-  def self.search(term)
+  def self.search
+    print 'Digite uma palavra para procurar: '
+    term = gets.chomp
+    found_items = StudyItem.all.filter do |item|
+      item.include?(term)
+    end
   end
 
   #def self.print
