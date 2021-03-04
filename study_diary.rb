@@ -6,22 +6,6 @@ VIEW     = 2
 SEARCH   = 3
 EXIT     = 4
 
-def welcome
-  'Bem-vindo ao Diário de Estudos, seu companheiro para estudar!'
-end
-
-def menu
-  menu = ["[#{REGISTER}] Cadastrar um item para estudar",
-          "[#{VIEW}] Ver todos os itens cadastrados",
-          "[#{SEARCH}] Buscar um item de estudo",
-          "[#{EXIT}] Sair",
-          ] 
-end
-
-def choose_an_option
-  print 'Escolha uma opção: '
-  gets.to_i
-end
 #clear
 puts welcome
 
@@ -34,14 +18,13 @@ loop do
     StudyItem.register
   when VIEW
     puts StudyItem.all
-    puts 'Nenhum item encontrado' if StudyItem.all.empty?
   when SEARCH
     puts StudyItem.search
   when EXIT
     #clear
-    puts 'Obrigado por usar o Diário de Estudos'
+    puts thanks_for_use_it
     break
   else
-    puts 'Opção inválida'
+    puts invalid_option
   end
 end

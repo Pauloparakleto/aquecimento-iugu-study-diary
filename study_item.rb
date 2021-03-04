@@ -31,6 +31,7 @@ class StudyItem
   end
 
   def self.all
+    return 'Nenhum item encontrado' if @@study_items.empty?
     @@study_items
   end
 
