@@ -37,8 +37,8 @@ class StudyItem
   def self.search(term)
   end
 
-  def self.print
-  end
+  #def self.print
+  #end
 
   def self.delete
     puts '==== Lista de items ===='
