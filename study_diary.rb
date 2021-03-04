@@ -30,5 +30,6 @@ loop do
     break
   else
     puts invalid_option
+    clear_and_wait_keypress
   end
 end
