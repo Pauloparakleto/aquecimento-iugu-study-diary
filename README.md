@@ -1,5 +1,6 @@
 # Study Diary
 ## A study diary running totally on Bash
+> Check the [Rails version here](https://github.com/Pauloparakleto/aquecimento-iugu-study-diary-rails)
 This version organizes the system commands inside the `system_helper.rb`, such as `clear` and `clear_and_wait_key_press` methods.
 
 The `diary_study.rb` file only call all methods it needs from `study_item.rb`.
